@@ -1,0 +1,265 @@
+
+<div class="hrcontent">
+    <div class="htd-cohorts-div"><strong>HTD Cohorts</strong></div>
+    <div class="htd-cohorts">
+        <table class="table table-striped table-hover">
+            <thead class="thead">
+                <tr>
+                    <th class="col">Cohort Number</th>
+                    <th class="col">Track Name</th>
+                    <th class="col">Track Status</th>
+                    <th class="col">Proposed Start Date</th>
+                    <th class="col">Account Manager</th>
+                    <th class="col">Coach</th>
+                    <th class="col">Mentor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cohort of cohorts">
+                  <td><a routerLink="/profile"><strong>{{cohort.cohortName}}</strong></a></td>
+                  <td>{{cohort.trackName}}</td>
+                  <td>
+                    <div class="status status-ok">{{cohort.status}}</div>
+                  </td>
+                  <td>{{cohort.trainingStartDate | date:'fullDate'}}</td>
+                  <td>{{cohort.accountManager.name}}</td>
+                  <td>{{cohort.coach}}</td>
+                  <td>{{cohort.mentor}}</td>
+                </tr>
+
+<!--                <tr>-->
+<!--                    <td><a routerLink='/profile'><strong>Cohort 18</strong></a></td>-->
+<!--                    <td>Data Analytics</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Sunday, 20 Mar 2022</td>-->
+<!--                    <td>Amy Mckenzie</td>-->
+<!--                    <td>Mayer Peters</td>-->
+<!--                    <td>Clemons Riva</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 1</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-training">Training</div>-->
+<!--                    </td>-->
+<!--                    <td>Monday, 21 Feb 2022</td>-->
+<!--                    <td>Adams Cannon</td>-->
+<!--                    <td>Essie Kelley</td>-->
+<!--                    <td>Maribel Fulto</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 11</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 26 Apr 2022</td>-->
+<!--                    <td>Nina Hendrix</td>-->
+<!--                    <td>Joseph Wynn</td>-->
+<!--                    <td>Cecile Huffma</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 14</strong></a></td>-->
+<!--                    <td>Data Analytics</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Friday, 7 Jan 2022</td>-->
+<!--                    <td>Rollins Randall</td>-->
+<!--                    <td>Hammond Osborne</td>-->
+<!--                    <td>Chen Floy</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 10</strong></a></td>-->
+<!--                    <td>DevOps</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Sunday, 27 Mar 2022</td>-->
+<!--                    <td>Jo King</td>-->
+<!--                    <td>Rebecca Orr</td>-->
+<!--                    <td>Cornelia Terr</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 2</strong></a></td>-->
+<!--                    <td>Data Analytics</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 1 Feb 2022</td>-->
+<!--                    <td>Marissa Garcia</td>-->
+<!--                    <td>Love Levine</td>-->
+<!--                    <td>Debra Medin</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 4</strong></a></td>-->
+<!--                    <td>.NET & Angular</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Wednesday, 26 Jan 2022</td>-->
+<!--                    <td>Weaver Rosa</td>-->
+<!--                    <td>James York</td>-->
+<!--                    <td>Schultz Davi</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 13</strong></a></td>-->
+<!--                    <td>.NET & Angular</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 10 May 2022</td>-->
+<!--                    <td>Monroe Hoover</td>-->
+<!--                    <td>Wall Ashley</td>-->
+<!--                    <td>Freda Lun</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 12</strong></a></td>-->
+<!--                    <td>Data Analytics</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 21 Jun 2022</td>-->
+<!--                    <td>Deanne Mendez</td>-->
+<!--                    <td>Hewitt Dawson</td>-->
+<!--                    <td>Simmons Ramire</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 7</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 25 Jan 2022</td>-->
+<!--                    <td>Francisca Ball</td>-->
+<!--                    <td>Keller Noel</td>-->
+<!--                    <td>Banks Howar</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 20</strong></a></td>-->
+<!--                    <td>.NET & Angular</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Monday, 2 May 2022</td>-->
+<!--                    <td>Georgette Benton</td>-->
+<!--                    <td>Francis Small</td>-->
+<!--                    <td>Louisa Col</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 7</strong></a></td>-->
+<!--                    <td>.NET & Angular</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-training">Training</div>-->
+<!--                    </td>-->
+<!--                    <td>Monday, 24 Jan 2022</td>-->
+<!--                    <td>Yates Bruce</td>-->
+<!--                    <td>Lolita Witt</td>-->
+<!--                    <td>Young Jarvi</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 20</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Thursday, 21 Apr 2022</td>-->
+<!--                    <td>Wilder Hodge</td>-->
+<!--                    <td>Cooley Hunt</td>-->
+<!--                    <td>Nora Wagne</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 15</strong></a></td>-->
+<!--                    <td>DevOps</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-training">Training</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 8 Feb 2022</td>-->
+<!--                    <td>Wilma Rutledge</td>-->
+<!--                    <td>Castaneda Chan</td>-->
+<!--                    <td>Wiley Joyc</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 13</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Sunday, 30 Jan 2022</td>-->
+<!--                    <td>Kerr Ballard</td>-->
+<!--                    <td>Claudine Stuart</td>-->
+<!--                    <td>Donna Turne</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 20</strong></a></td>-->
+<!--                    <td>SharePoint</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Friday, 4 Feb 2022</td>-->
+<!--                    <td>Juana Parsons</td>-->
+<!--                    <td>Minerva Mclaughlin</td>-->
+<!--                    <td>Hinton Pric</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 8</strong></a></td>-->
+<!--                    <td>PEGA</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Monday, 18 Apr 2022</td>-->
+<!--                    <td>Bryan Barrera</td>-->
+<!--                    <td>Alberta Jordan</td>-->
+<!--                    <td>Simpson Well</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 18</strong></a></td>-->
+<!--                    <td>SharePoint</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-ok">Deployed</div>-->
+<!--                    </td>-->
+<!--                    <td>Monday, 9 May 2022</td>-->
+<!--                    <td>Shannon Deleon</td>-->
+<!--                    <td>Alford Case</td>-->
+<!--                    <td>Merrill Zamor</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 8</strong></a></td>-->
+<!--                    <td>.NET & Angular</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-training">Training</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 31 May 2022</td>-->
+<!--                    <td>Burks Ruiz</td>-->
+<!--                    <td>Sherry Erickson</td>-->
+<!--                    <td>Travis Schwart</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 8</strong></a></td>-->
+<!--                    <td>DevOps</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-training">Training</div>-->
+<!--                    </td>-->
+<!--                    <td>Friday, 11 Feb 2022</td>-->
+<!--                    <td>Jodie Mccarthy</td>-->
+<!--                    <td>Janell Ellis</td>-->
+<!--                    <td>Christa Collin</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><a href=""><strong>Cohort 18</strong></a></td>-->
+<!--                    <td>SharePoint</td>-->
+<!--                    <td>-->
+<!--                        <div class="status status-other">Other</div>-->
+<!--                    </td>-->
+<!--                    <td>Tuesday, 31 May 2022</td>-->
+<!--                    <td>Corina Roy</td>-->
+<!--                    <td>Cameron Taylor</td>-->
+<!--                    <td>Mcdaniel Dickso</td>-->
+<!--                </tr>-->
+
+            </tbody>
+        </table>
+    </div>
+</div>

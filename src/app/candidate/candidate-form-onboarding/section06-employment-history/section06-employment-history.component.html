@@ -1,0 +1,208 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Employment History</h4>
+                                        <span class="subtitle">Please make sure to answer the following questions with *
+                                            mark.</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-4 col-form-label required-label">33. Do you
+                                                        have work experience?</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08WorkExperience" id="section08FreshGrad"
+                                                                (change)="workExperience=0" checked="checked">
+                                                            <label class="form-check-label" for="section08FreshGrad">No,
+                                                                I'm a fresh grad</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08WorkExperience" id="sectio081Work"
+                                                                (change)="workExperience=1">
+                                                            <label class="form-check-label" for="sectio081Work">Yes, I
+                                                                have 1 work experience</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08WorkExperience" id="sectio082Work"
+                                                                (change)="workExperience=2">
+                                                            <label class="form-check-label" for="sectio082Work">Yes, I
+                                                                have more than 1 work experience</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="workExperience!=0">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE1CompanyName"
+                                                            class="col-sm-4 col-form-label required-label">33i. Work
+                                                            Experience 1 - Company Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1CompanyName"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE1Position"
+                                                            class="col-sm-4 col-form-label required-label ">33ii. (1)
+                                                            Position</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1Position"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE1DateJoined"
+                                                            class="col-sm-4 col-form-label required-label">33iii. (1) Date
+                                                            Joined</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1DateJoined"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE1DateLeft"
+                                                            class="col-sm-4 col-form-label required-label">33iv. (1) Date
+                                                            Left</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1DateLeft"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE1LastSalary"
+                                                            class="col-sm-4 col-form-label">33v. (1) Last drawn
+                                                            salary</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1LastSalary"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <label for="section08WE1Reason"
+                                                            class="col-sm-4 col-form-label">33vi. (1) Reason for Intended
+                                                            Change of Employment</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE1Reason" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="workExperience==2">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2CompanyName"
+                                                            class="col-sm-4 col-form-label required-label">33vii. Work
+                                                            Experience 2 - Company Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2CompanyName"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2Position"
+                                                            class="col-sm-4 col-form-label required-label ">33viii. (2)
+                                                            Position</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2Position"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2DateJoined"
+                                                            class="col-sm-4 col-form-label required-label">33ix. (2) Date
+                                                            Joined</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2DateJoined"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2DateLeft"
+                                                            class="col-sm-4 col-form-label required-label">33x. (2) Date
+                                                            Left</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2DateLeft"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2LastSalary"
+                                                            class="col-sm-4 col-form-label">33xi. (2) Last drawn
+                                                            salary</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2LastSalary"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section08WE2Reason"
+                                                            class="col-sm-4 col-form-label">33xii. (2) Reason for Intended
+                                                            Change of Employment</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="section08WE2Reason" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section05']" type="button"
+                                                    class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section07']" type="button"
+                                                    class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

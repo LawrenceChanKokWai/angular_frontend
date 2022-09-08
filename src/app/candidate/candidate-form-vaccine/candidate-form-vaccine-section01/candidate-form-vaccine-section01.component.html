@@ -1,0 +1,143 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <!-- header -->
+                        <div class="col-sm-12 text-center form-header">
+                            <h4 class="title"><strong>Vaccine & Travel Declaration Form</strong></h4>
+                        </div>
+
+                        <!-- side nav -->
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav-vax></app-side-nav-vax>
+                        </div>
+
+                        <!-- rightab -->
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include">
+                                        <br>
+                                        <h4 class="title">Details</h4>
+<!--                                        <span class="subtitle"><span style="color: red;">*</span> Required</span>-->
+
+                                        <!-- Form starts ================================================-->
+                                        <form class="mt-3" [formGroup]="addVaccineDeclaration">
+                                            <div class="input-wrapper">
+
+                                              <!--Vaccination date-->
+                                              <div class="mb-3 row">
+                                                  <label for="date" class="col-sm-4 col-form-label required-label">1. Date</label>
+                                                  <div class="col-sm-8">
+                                                    <input type="text" name="date" id="date" placeholder="Please input date" class="form-control mt-2" bsDatepicker [bsConfig]="bsConfig" placement="bottom" formControlName="date">
+                                                    <small *ngIf="addVaccineDeclaration.get('date')?.invalid && addVaccineDeclaration.get('date')?.touched" class="text-danger">**Vaccination date Is Required</small>
+                                                  </div>
+                                              </div>
+
+                                              <!--Travel Plans-->
+                                              <div class="mb-3 row">
+                                                <label class="col-sm-4 col-form-label required-label">2. Travel Plan for the next 3 months</label>
+                                                <div class="col-sm-8 align-self-center">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="no" name="travelPlan" formControlName="travelPlan">
+                                                      <label class="form-check-label">
+                                                        No, I am NOT travelling
+                                                      </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="yes" name="travelPlan" formControlName="travelPlan">
+                                                    <label class="form-check-label">
+                                                      Yes, I will be travelling
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="unsure" name="travelPlan" formControlName="travelPlan">
+                                                    <label class="form-check-label">
+                                                      Unsure at the moment
+                                                    </label>
+                                                  </div>
+                                                  <small *ngIf="addVaccineDeclaration.get('travelPlan')?.invalid && addVaccineDeclaration.get('travelPlan')?.touched" class="text-danger">**Travel plans Is Required</small>
+                                                </div>
+                                              </div>
+
+                                              <!--From To-->
+                                              <div class="row mb-3">
+                                                <label for="fromTo" class="col-sm-4 col-form-label">3. If Yes, when are you traveling (from - to)</label>
+                                                <div class="col-sm-8">
+                                                  <input class="form-control" type="text" name="fromTo" id="fromTo" placeholder="Enter your answer" formControlName="fromTo" >
+                                                </div>
+                                              </div>
+
+                                              <!--Reason for travelling-->
+                                              <div class="mb-3 row">
+                                                <label class="col-sm-4 col-form-label required-label">4. Reason for Travel</label>
+                                                <div class="col-sm-8 align-self-center">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="business" name="travelReason" formControlName="travelReason">
+                                                    <label class="form-check-label">
+                                                      Business
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="leisure" name="travelReason" formControlName="travelReason">
+                                                    <label class="form-check-label">
+                                                      Leisure
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="social visit" name="travelReason" formControlName="travelReason">
+                                                    <label class="form-check-label">
+                                                      Social Visit
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="travelReason">
+                                                    <label class="form-check-label">
+                                                      <input class="form-control" type="text" name="travelReason" id="travelReason" placeholder="Other" formControlName="travelReason" >
+                                                    </label>
+                                                  </div>
+                                                  <small *ngIf="addVaccineDeclaration.get('travelPlan')?.invalid && addVaccineDeclaration.get('travelPlan')?.touched" class="text-danger">**Travel plans Is Required</small>
+                                                </div>
+                                              </div>
+
+                                              <!--Intent To Go-->
+                                              <div class="row mb-3">
+                                                <label for="intendToGo" class="col-sm-4 col-form-label required-label">5. Countries you intend to go</label>
+                                                <div class="col-sm-8">
+                                                  <input class="form-control" type="intendToGo" name="intendToGo" id="intendToGo" placeholder="Enter your answer" formControlName="intendToGo" >
+                                                  <small *ngIf="addVaccineDeclaration.get('intendToGo')?.invalid && addVaccineDeclaration.get('intendToGo')?.touched" class="text-danger">**Country intended to go Is Required</small>
+                                                </div>
+                                              </div>
+
+                                              <!--Visited Country-->
+                                              <div class="row mb-3">
+                                                <label for="visitedCountry" class="col-sm-4 col-form-label required-label">6. Countries visited in the past 2 year</label>
+                                                <div class="col-sm-8">
+                                                  <input class="form-control" type="visitedCountry" name="visitedCountry" id="visitedCountry" placeholder="Enter your answer" formControlName="visitedCountry" >
+                                                  <small *ngIf="addVaccineDeclaration.get('visitedCountry')?.invalid && addVaccineDeclaration.get('visitedCountry')?.touched" class="text-danger">**Country visited in the past 2yr Is Required</small>
+                                                </div>
+                                              </div>
+
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/vax-form-01']" class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/vax-form-03']" class="btn btn-primary px-5 me-2" (click)=handleAddVaccineDeclaration() [disabled]="addVaccineDeclaration.invalid">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.my-tasks, .htd-cohorts {
+    float: bottom;
+    border: 1px solid #9E9E9E;
+    height: 280px;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.my-tasks-div, .htd-cohorts-div {
+    padding: 10px 0 10px 30px;
+    margin: 0;
+    background-color: #FCFCFA;
+    border: 1px solid #9E9E9E;
+    color: #18A0FB;
+    font-size: 20px;
+}
+
+.table {
+    border-top: 1px solid gray;
+    text-align: center;
+    /* border-collapse: co; */
+}
+
+.table thead tr th, .thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.htd-cohorts-div {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.htd-cohorts {
+    margin-top: 0;
+}
+
+.hrcontent {
+    padding: 30px 70px;
+}
+
+.status {
+    border-radius: 5px;
+}
+
+.status-incomplete {
+    background-color: #fd6565b8;
+}
+
+.status-ok {
+    background-color: #26df26b6;
+}
+
+.status-training {
+    background-color: #ffa600b6;
+}
+
+.status-other {
+    background-color: #a49898b6;
+}

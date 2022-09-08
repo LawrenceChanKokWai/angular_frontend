@@ -1,0 +1,201 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <!-- header -->
+                        <div class="col-sm-12 text-center form-header">
+                            <h4 class="title"><strong>Banking Form</strong></h4>
+                        </div>
+
+                        <!-- side nav -->
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav-bank></app-side-nav-bank>
+                        </div>
+
+                        <!-- rightab -->
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include">
+                                        <br>
+                                        <h4 class="title">Banking Details</h4>
+                                        <span class="subtitle"><span style="color: red;">*</span> Required</span>
+
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="bank-form-acct-name"
+                                                        class="col-sm-4 col-form-label required-label">1.
+                                                        Your Bank Account Name</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="bank-form-acct-name"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="bankCodes"
+                                                        class="col-sm-4 col-form-label required-label">2. Bank Name / Bank Code</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode00" value="true">
+                                                            <label class="form-check-label" for="bankCode00">BOC
+                                                                7083</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode01" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode01">BOI 7108</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode02" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode02">BPI 010040018</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode03" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode03">Citibank 7214</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode04" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode04">DBS/POSB 7171</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode05" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode05">HSBC 9548</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode06" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode06">MB 7302</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode07" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode07">OCBC 7339</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode08" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode08">SCB 9496</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="bankCodes" id="bankCode09" value="false">
+                                                            <label class="form-check-label"
+                                                                for="bankCode09">Other</label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="bank-form-branch-name"
+                                                        class="col-sm-4 col-form-label required-label">3.
+                                                        Bank Branch Name</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="bank-form-branch-name"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="bank-form-branch-code"
+                                                        class="col-sm-4 col-form-label required-label">4.
+                                                        Bank Branch Code</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="bank-form-branch-code"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="bank-form-acct-number"
+                                                        class="col-sm-4 col-form-label required-label">5.
+                                                        Your Bank Account Number</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="bank-form-acct-number"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="bank-form-branch-addr"
+                                                        class="col-sm-4 col-form-label required-label">6.
+                                                        Bank Branch Address</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="bank-form-branch-addr"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="section01Sex"
+                                                        class="col-sm-4 col-form-label required-label">7. Question</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inlineRadioOptions" id="section01GenderMale"
+                                                                value="true">
+                                                            <label class="form-check-label"
+                                                                for="section01GenderMale">Option 1</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inlineRadioOptions" id="section01GenderFemale"
+                                                                value="false">
+                                                            <label class="form-check-label"
+                                                                for="section01GenderFemale">Option 2</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="mb-3 row">
+                                                    <label for="inputSiblingNationality2"
+                                                        class="col-sm-4 col-form-label required-label">8. Question</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control mt-2" bsDatepicker
+                                                            [bsConfig]="bsConfig" placement="top"
+                                                            placeholder="Enter date">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/bank-form-01']"
+                                                    class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/bank-form-03']"
+                                                    class="btn btn-primary px-5 me-2">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</div>

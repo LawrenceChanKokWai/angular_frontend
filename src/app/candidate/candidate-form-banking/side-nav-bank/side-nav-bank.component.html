@@ -1,0 +1,21 @@
+<div class="vrtwiz">
+    <ul class="verticalwiz nav">
+        <li [class.active]="router.url=='/bank-form-01'">
+            <a [routerLink]="['/bank-form-01']" data-toggle="tab" [class.active]="router.url=='/bank-form-01'">
+                <div class="step"></div> <span class="title">Banking Form Start</span>
+            </a>
+        </li>
+        <li class="nav-link divider"></li>
+        <li [class.active]="router.url=='/bank-form-02'">
+            <a [routerLink]="['/bank-form-02']" data-toggle="tab" [class.active]="router.url=='/bank-form-02'">
+                <div class="step"></div> <span class="title">Section 01</span>
+            </a>
+        </li>
+        <li class="nav-link divider"></li>
+        <li [class.active]="router.url=='/bank-form-03'">
+            <a [routerLink]="['/bank-form-03']" data-toggle="tab" [class.active]="router.url=='/bank-form-03'">
+                <div class="step"></div> <span class="title">Banking Form End</span>
+            </a>
+        </li>
+    </ul>
+</div>

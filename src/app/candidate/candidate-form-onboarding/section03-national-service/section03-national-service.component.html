@@ -1,0 +1,279 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">National Service</h4>
+                                        <span class="subtitle">Applicable only for Male, Singapore Citizen, or Permanent
+                                            Resident of Singapore.</span>
+                                        <br />
+                                        <span class="subtitle">Please make sure to answer the following questions with *
+                                            mark.</span>
+                                        <form class="mt-0">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="section03Singaporean"
+                                                        class="col-sm-6 col-form-label required-label">24. Are you a
+                                                        Citizen of Singapore?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section03Singaporean" id="section03SingaporeanYes"
+                                                                (change)="isSingaporean=true">
+                                                            <label class="form-check-label"
+                                                                for="section03SingaporeanYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section03Singaporean" id="section03SingaporeanNo"
+                                                                (change)="isSingaporean=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="section03SingaporeanNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isSingaporean">
+                                                    <div class="mb-3 row">
+                                                        <label for="section03Enlisted"
+                                                            class="col-sm-6 col-form-label required-label">24i. Were you
+                                                            enlisted for
+                                                            the National Service?</label>
+                                                        <div class="col-sm-6 align-self-center">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03Enlisted" id="section03EnlistedYes"
+                                                                    (change)="isEnlisted=1">
+                                                                <label class="form-check-label"
+                                                                    for="section03EnlistedYes">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03Enlisted" id="section03EnlistedNo"
+                                                                    (change)="isEnlisted=0" checked="check">
+                                                                <label class="form-check-label"
+                                                                    for="section03EnlistedNo">No</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03Enlisted" id="section03EnlistedNo"
+                                                                    (change)="isEnlisted=2">
+                                                                <label class="form-check-label"
+                                                                    for="section03EnlistedNo">No, I'm a female</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div *ngIf="isEnlisted==1">
+
+                                                        <div class="mb-3 row">
+                                                            <label class="col-sm-6 col-form-label">24i-i. Date
+                                                                Enlisted</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control mt-2"
+                                                                    bsDatepicker [bsConfig]="bsConfig" placement="top"
+                                                                    placeholder="Enter date">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3 row">
+                                                            <label class="col-sm-6 col-form-label">24i-ii. Date
+                                                                Discharged</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control mt-2"
+                                                                    bsDatepicker [bsConfig]="bsConfig" placement="top"
+                                                                    placeholder="Enter date">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3 row">
+                                                            <label for="inputMothersName"
+                                                                class="col-sm-6 col-form-label">24i-iii. Actual Period
+                                                                Served
+                                                                in Months</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control"
+                                                                    id="section03VocationRank"
+                                                                    placeholder="Enter your answer">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="mb-3 row">
+                                                            <label for="section03Period"
+                                                                class="col-sm-6 col-form-label">24i-iv. Period of Regular
+                                                                /
+                                                                Contract Service</label>
+                                                            <div class="col-sm-6 align-self-center">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="section03Period" id="section03PeriodYes"
+                                                                        value="true">
+                                                                    <label class="form-check-label"
+                                                                        for="section03PeriodYes">Yes</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="section03Period" id="section03PeriodNo"
+                                                                        value="false">
+                                                                    <label class="form-check-label"
+                                                                        for="section03PeriodNo">No</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3 row">
+                                                            <label for="section03VocationRank"
+                                                                class="col-sm-6 col-form-label">24i-v. Vocation /
+                                                                Rank</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control"
+                                                                    id="section03VocationRank"
+                                                                    placeholder="Enter your answer">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3 row">
+                                                            <label for="section03PE"
+                                                                class="col-sm-6 col-form-label">24i-vi.
+                                                                PE S Grading</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="section03PE"
+                                                                    placeholder="Enter your answer">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section03Exempted"
+                                                            class="col-sm-6 col-form-label">24ii. Are you exempted
+                                                            Reservist Training?</label>
+                                                        <div class="col-sm-6 align-self-center">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03Exempted" id="section03ExemptedYes"
+                                                                    (change)="isExemptedReservist=true">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExemptedYes">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03Exempted" id="section03ExemptedNo"
+                                                                    (change)="isExemptedReservist=false" checked="check">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExemptedNo">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row" *ngIf="isExemptedReservist">
+                                                        <label for="section03ExcusedReservistEmail"
+                                                            class="col-sm-6 col-form-label">
+                                                            <p class="mb-0">24ii-i. Email exeption letter if excused
+                                                                from reservist training.</p>
+                                                            <p class="mb-0 ps-4">Kindly email to <a
+                                                                    href="mailto:hr.ops@geco.asia">hr.ops@geco.asia</a>.
+                                                            </p>
+                                                            <p class="mb-0 ps-4">Include your name as filename
+                                                                (steverogers_exemptionreservisttraining.pdf).</p>
+                                                        </label>
+                                                        <div class="col-sm-6 align-self-center">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="section03ExcusedReservistEmail"
+                                                                    id="section03ExcuseReservistEmailNotApplicable"
+                                                                    value="true">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExcuseReservistEmailNotApplicable">Not
+                                                                    Applicable</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section03ExemptedNationalService"
+                                                            class="col-sm-6 col-form-label">24iii. Are you exempted
+                                                            National Service?</label>
+                                                        <div class="col-sm-6 align-self-center">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03ExemptedNationalService"
+                                                                    id="section03ExemptedNationalServiceYes"
+                                                                    (change)="isExemptedService=true">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExemptedNationalServiceYes">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="section03ExemptedNationalService"
+                                                                    id="section03ExemptedNationalServiceNo"
+                                                                    (change)="isExemptedService=false" checked="check">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExemptedNationalServiceNo">No</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row" *ngIf="isExemptedService">
+                                                        <label for="section03ExcusedNationalEmail"
+                                                            class="col-sm-6 col-form-label">
+                                                            <p class="mb-0">24iii-i. Email exeption letter if excused from
+                                                                National Service.</p>
+                                                            <p class="mb-0 ps-4">Kindly email to <a
+                                                                    href="mailto:hr.ops@geco.asia">hr.ops@geco.asia</a>.
+                                                            </p>
+                                                            <p class="mb-0 ps-4">Include your name as filename
+                                                                (steverogers_exemptionreservisttraining.pdf).</p>
+                                                        </label>
+                                                        <div class="col-sm-6 align-self-center">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="section03ExcusedNationalEmail"
+                                                                    id="section03ExcuseNationalEmailNotApplicable"
+                                                                    value="true">
+                                                                <label class="form-check-label"
+                                                                    for="section03ExcuseNationalEmailNotApplicable">Not
+                                                                    Applicable</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section02']" type="button"
+                                                    class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section04']" type="button"
+                                                    class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

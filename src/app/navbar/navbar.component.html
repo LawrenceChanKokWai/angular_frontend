@@ -1,0 +1,24 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="left-side-nav">
+            <img class="geco-logo" src="../../assets/images/getsitelogo.png" alt="geco logo">
+            <!-- <a>AM dashboard</a> -->
+            <!-- <a>Settings</a> -->
+        </div>
+        <div class="right-side-nav">
+        <!-- *ngIf="(accountService.currentUser$ | async) as user" -->
+            <div class="dropdown" *ngIf="accountService.isLoggedIn()">
+                <a class="dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton1">Welcome,
+                    {{accountService.currentUser.FirstName}}
+                    {{accountService.currentUser.LastName}}
+                </a>
+                <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item">Edit Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="" (click)="accountService.logout()">Logout</a>
+                </div>
+            </div>
+            <!-- <button class="logout" (click)="logout()">Log out</button> -->
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,36 @@
+.content {
+    background-color: #f6f6f6;
+    height: calc(100vh - 75px - 1em);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+.rightab {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    padding: 30px;
+    height: calc(100vh - 75px - 3em);
+    background-color: white;    
+}*/
+
+.input-wrapper {
+    height: 61vh;
+    
+}
+
+input {
+    background-color: #f6f6f6;
+}
+
+
+/*End vertical Wizard*/
+
+.title {
+    color: #18A0FB;
+}
+
+.subtitle {
+    font-weight: 300;
+}

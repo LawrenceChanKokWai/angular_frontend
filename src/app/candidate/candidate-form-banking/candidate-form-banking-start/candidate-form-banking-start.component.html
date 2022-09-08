@@ -1,0 +1,74 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <!-- header -->
+                        <div class="col-sm-12 text-center form-header">
+                            <h4 class="title"><strong>Banking Form</strong></h4>
+                        </div>
+
+                        <!-- side nav -->
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav-bank></app-side-nav-bank>
+                        </div>
+
+                        <!-- rightab -->
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include">
+                                        <br>
+                                        <h4 class="title">Start</h4>
+                                        <span class="subtitle" style="color: white;">asd</span>
+
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+                                                <p>This form will take approx. 5 minutes to complete.</p>
+                                                <p>Dear Consultant</p>
+                                                <p>
+                                                    Please provide the banking information and Bank statement.
+                                                    <br />
+                                                    <strong>A Bank Statement is required to do bank details
+                                                        verification</strong> to confirm your bank account is still
+                                                    active and belongs to you.
+                                                </p>
+                                                <p>
+                                                    Provide either one of the options:
+                                                    <br />
+                                                    1. Top part of Bank statement indicates bank letterhead, your name
+                                                    and account number or
+                                                    <br />
+                                                    2. Bank Book 1st page reflected your name, account number with bank
+                                                    rubber stamp or
+                                                    <br />
+                                                    3. Internet Bank Statement indicates bank letterhead, your name and
+                                                    account number.
+                                                    Please email a copy of the bank statement to <a
+                                                        href="mailto:hr.ops@geco.asia">hr.ops@geco.asia</a>.
+                                                </p>
+                                                <p>
+                                                    Thank you!
+                                                </p>
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/bank-form-02']"
+                                                    class="btn btn-primary px-5 me-2">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</div>

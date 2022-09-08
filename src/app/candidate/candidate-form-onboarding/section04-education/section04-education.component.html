@@ -1,0 +1,223 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Education</h4>
+                                        <span class="subtitle">Please make sure to answer the following questions with *
+                                            mark.</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="section04EducationAttended"
+                                                        class="col-sm-5 col-form-label required-label">25. Highest
+                                                        Education/Schools/Institution/Universities attended</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control"
+                                                            id="section04EducationAttended"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="section04StartSchoolYear"
+                                                        class="col-sm-5 col-form-label required-label">26. Start of
+                                                        School Year (MM/YYYY)</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control mt-2" bsDatepicker
+                                                            [bsConfig]="bsConfig" placement="top"
+                                                            placeholder="Enter date" id="section04StartSchoolYear">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="section04EndSchoolYear"
+                                                        class="col-sm-5 col-form-label required-label">27. End of School
+                                                        Year (MM/YYYY)</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control mt-2" bsDatepicker
+                                                            [bsConfig]="bsConfig" placement="top"
+                                                            placeholder="Enter date" id="section04StartSchoolYear">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3 row">
+                                                    <label for="section04Qualifications"
+                                                        class="col-sm-5 col-form-label required-label">28.
+                                                        Qualifications Obtained</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control"
+                                                            id="section04Qualifications"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-5 col-form-label required-label">29. Do you
+                                                        have notable qualifications/membership of professional bodies
+                                                        that you would like to share?</label>
+                                                    <div class="col-sm-7 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="OtherQualification"
+                                                                id="section04ProfessionalOptionsYes"
+                                                                (change)="otherQualification=true">
+                                                            <label class="form-check-label"
+                                                                for="section04ProfessionalOptionsYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="OtherQualification"
+                                                                id="section04ProfessionalOptionsNo"
+                                                                (change)="otherQualification=false" checked="checked">
+                                                            <label class="form-check-label"
+                                                                for="section04ProfessionalOptionsNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="otherQualification">
+                                                    <div class="mb-3 row">
+                                                        <label for="section051Qualifications"
+                                                            class="col-sm-5 col-form-label">29i. (1)
+                                                            Qualifications</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control"
+                                                                id="section051Qualifications"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section051YearObtained"
+                                                            class="col-sm-5 col-form-label">29ii. (1) Year
+                                                            Obtained</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" bsDatepicker
+                                                                [bsConfig]="bsConfig" placement="top"
+                                                                placeholder="Enter date" id="section051YearObtained">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section051AwardingInstitution"
+                                                            class="col-sm-5 col-form-label">29iii. (1) Awarding
+                                                            Institution</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control"
+                                                                id="section051AwardingInstitution"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section052Qualifications"
+                                                            class="col-sm-5 col-form-label">29iv. (2)
+                                                            Qualifications</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control"
+                                                                id="section052Qualifications"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section052YearObtained"
+                                                            class="col-sm-5 col-form-label">29v. (2) Year
+                                                            Obtained</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" bsDatepicker
+                                                                [bsConfig]="bsConfig" placement="top"
+                                                                placeholder="Enter date" id="section052YearObtained">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mb-3 row">
+                                                        <label for="section052AwardingInstitution"
+                                                            class="col-sm-5 col-form-label">29vi. (2) Awarding
+                                                            Institution</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control"
+                                                                id="section052AwardingInstitution"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-5 col-form-label required-label">30. Do you
+                                                        have scholarships or awards?</label>
+                                                    <div class="col-sm-7 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="Scholarships" id="section04ScholarshipYes"
+                                                                (change)="scholarship=true">
+                                                            <label class="form-check-label"
+                                                                for="section04ScholarshipYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="Scholarships" id="section04ScholarshipNo"
+                                                                (change)="scholarship=false" checked="checked">
+                                                            <label class="form-check-label"
+                                                                for="section04ScholarshipNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="scholarship">
+                                                    <div class="mb-3 row">
+                                                        <label for="section06Scholarship01"
+                                                            class="col-sm-5 col-form-label">30i. (1) Scholarship / Awards</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control" id="section06Scholarship01"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="section06Scholarship02"
+                                                            class="col-sm-5 col-form-label">30ii. (2) Scholarship / Awards</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" class="form-control"
+                                                                id="section06Scholarship02" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section03']" type="button"
+                                                    class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section05']" type="button"
+                                                    class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

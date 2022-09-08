@@ -1,0 +1,45 @@
+
+<!--Updated on: 27 July 2022-->
+<!--By: Lawrence Chan-->
+<!--Description: Added FormGroup-->
+
+<div style="background-color: #f2f2f2; height: 100vh;">
+    <div class="inner-div">
+        <main class="form-signin"  >
+            <div class="dropdown">
+                <img class="dropdown-toggle mb-4 ms-5 mt-3" data-bs-toggle="dropdown" id="dropdownMenuButton1" src="../../assets/images/getsitelogo.png" alt="" height="82">
+                <ul class="dropdown-menu mt-3" aria-labelledby="dropdownMenuButton1">
+<!--                    <li class="dropdown-item" *ngFor="let email of logins" (click)="setEmail(email)">{{email}}</li>-->
+                </ul>
+            </div>
+
+              <!--Header-->
+              <h1 class="mt-5 mb-3 fw-normal text-center" style="font-size: 48px;">
+                Login
+              </h1>
+
+            <form [formGroup]="loginForm">
+<!--            <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">-->
+                <div class="login-wrapper text-center justify-content-center">
+                    <div class="form-floating" style="margin-top: 35px; margin-bottom: 41px">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="Email">
+<!--                        <input type="email" name="username" [(ngModel)]="model.email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{email}}">-->
+                      <label for="floatingInput">Email address</label>
+                      <small *ngIf="loginForm.get('Email')?.invalid && loginForm.get('Email')?.touched" class="text-danger">**Email Is Required</small>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="Password">
+<!--                        <input type="password" name="password" [(ngModel)]="model.password" class="form-control" id="floatingPassword" placeholder="Password">-->
+                        <label for="floatingPassword">Password</label>
+                      <small *ngIf="loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched" class="text-danger">**Password Is Required</small>
+                    </div>
+
+<!--              To look into it, somewhere went wrong on displaying-->
+                  <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+
+                    <button class="login-btn btn btn-lg btn-primary " type="submit" (click)="signIn()" [disabled]="loginForm.invalid">Login</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.left-side-nav img {
+    display: inline-block;
+    margin: 0 50px;
+}
+
+.container-fluid {
+    padding: 5px;
+    min-height: 75px;
+}
+
+.right-side-nav {
+    padding: 0 65px
+}
+
+.geco-logo {
+    height: 65px;
+}
+
+.a {
+    color: #18A0FB;
+    font-weight: bold;
+}
+
+.logout {
+    background-color: #18A0FB;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
+}

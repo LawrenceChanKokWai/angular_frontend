@@ -1,0 +1,57 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Language Proficiency</h4>
+                                        <span class="subtitle">Please stage proficiency e.g. English - Excellent, English - Good, English - Fair</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="section07Written" class="col-sm-4 col-form-label">31. Languages (Written and Spoken)</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="section07Written"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="section07LanguagesSpoken"
+                                                        class="col-sm-4 col-form-label">32. Languages (Spoken only)</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="section07LanguagesSpoken" placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section04']" type="button" class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section06']" type="button" class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

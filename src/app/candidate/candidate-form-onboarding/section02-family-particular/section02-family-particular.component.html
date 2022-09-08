@@ -1,0 +1,378 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Family Particulars</h4>
+                                        <span class="subtitle">Please include parents, spouse, siblings and children
+                                            where applicable</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="inputFathersName" class="col-sm-4 col-form-label">15.
+                                                        Father's Name</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="inputFathersName"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="inputFathersNationality"
+                                                        class="col-sm-4 col-form-label">16. Father's Nationality</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control"
+                                                            id="inputFathersNationality"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="inputFathersBirthdate"
+                                                        class="col-sm-4 col-form-label">17. Father's Birthdate</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control"
+                                                            id="inputFathersBirthdate" placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <!-- <br /> -->
+                                                <div class="mb-3 row">
+                                                    <label for="inputMothersName" class="col-sm-4 col-form-label">18.
+                                                        Mother's Name</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="inputMothersName"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="inputMothersNationality"
+                                                        class="col-sm-4 col-form-label">19. Mother's Nationality</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control"
+                                                            id="inputMothersNationality"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="inputMothersBirthdate"
+                                                        class="col-sm-4 col-form-label">20. Mother's Birthdate</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control"
+                                                            id="inputMothersBirthdate" placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <!-- <br /> -->
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-4 col-form-label">21. Do you have
+                                                        siblings?</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="hasSiblings" id="section02SiblingsYes"
+                                                                (change)="hasSiblings=true">
+                                                            <label class="form-check-label"
+                                                                for="section02SiblingsYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="hasSiblings" id="section02SiblingsNo"
+                                                                (change)="hasSiblings=false" checked="checked">
+                                                            <label class="form-check-label"
+                                                                for="section02SiblingsNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <br /> -->
+                                                <!-- WITH IF ELSE (SIBLING DEPENDENT) -->
+                                                <div *ngIf="hasSiblings">
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingName1"
+                                                            class="col-sm-4 col-form-label">21i. (1) Sibling's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingName1" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingNationality1"
+                                                            class="col-sm-4 col-form-label">21ii. (1) Sibling's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingNationality1"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingBirthdate1"
+                                                            class="col-sm-4 col-form-label">21iii. (1) Sibling's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingBirthdate1"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <!-- <br /> -->
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingName2"
+                                                            class="col-sm-4 col-form-label">21iv. (2) Sibling's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingName2" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingNationality2"
+                                                            class="col-sm-4 col-form-label">21v. (2) Sibling's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingNationality2"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingBirthdate2"
+                                                            class="col-sm-4 col-form-label">21vi. (2) Sibling's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingBirthdate2"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <!-- <br /> -->
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingName3"
+                                                            class="col-sm-4 col-form-label">21vii. (3) Sibling's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingName3" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingNationality3"
+                                                            class="col-sm-4 col-form-label">21viii. (3) Sibling's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingNationality3"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSiblingBirthdate3"
+                                                            class="col-sm-4 col-form-label">21ix. (3) Sibling's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingBirthdate3"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <br /> -->
+                                                <div class="mb-3 row">
+                                                    <label for="isMarried" class="col-sm-4 col-form-label">22.
+                                                        Married?</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="isMarried" id="section02MariedYes"
+                                                                (change)="isMarried=true">
+                                                            <label class="form-check-label"
+                                                                for="section02MariedYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="isMarried" id="section02MariedNo"
+                                                                (change)="isMarried=false" checked="checked">
+                                                            <label class="form-check-label"
+                                                                for="section02MariedNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isMarried">
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSpouseName" class="col-sm-4 col-form-label">22i.
+                                                            Spouse's Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="inputSpouseName"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSpouseNationality"
+                                                            class="col-sm-4 col-form-label">22ii. Spouse's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSiblingNationality3"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputSpouseBirthdate"
+                                                            class="col-sm-4 col-form-label">22iii. Spouse's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputSpouseBirthdate"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label for="inputChildren" class="col-sm-4 col-form-label">23. Do you
+                                                        have children?</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inputChildren" id="section02Children"
+                                                                (change)="hasChildren=true">
+                                                            <label class="form-check-label"
+                                                                for="section02Children">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inputChildren" id="section02Children"
+                                                                (change)="hasChildren=false" checked="checked">
+                                                            <label class="form-check-label"
+                                                                for="section02Children">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="hasChildren">
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenName1"
+                                                            class="col-sm-4 col-form-label">23i. (1) Childs's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenName1" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenNationality1"
+                                                            class="col-sm-4 col-form-label">23ii. (1) Childs's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenNationality1"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenBirthdate1"
+                                                            class="col-sm-4 col-form-label">23iii. (1) Child's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenBirthdate1"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <!-- <br /> -->
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenName2"
+                                                            class="col-sm-4 col-form-label">23iv. (2) Child's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenName2" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenNationality2"
+                                                            class="col-sm-4 col-form-label">23v. (2) Child's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenNationality2"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenBirthdate2"
+                                                            class="col-sm-4 col-form-label">23vi. (2) Child's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenBirthdate2"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenName3"
+                                                            class="col-sm-4 col-form-label">23vii. (3) Child's
+                                                            Name</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenName3" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenNationality3"
+                                                            class="col-sm-4 col-form-label">23viii. (3) Child's
+                                                            Nationality</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenNationality3"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 row">
+                                                        <label for="inputChildrenBirthdate3"
+                                                            class="col-sm-4 col-form-label">23ix. (3) Child's
+                                                            Birthdate</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control"
+                                                                id="inputChildrenBirthdate3"
+                                                                placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- WITH IF ELSE (SIBLING DEPENDENT) -->
+
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section01']" type="button"
+                                                    class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section03']" type="button"
+                                                    class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

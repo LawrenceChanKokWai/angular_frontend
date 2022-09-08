@@ -1,0 +1,65 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Emergency Contact</h4>
+                                        <span class="subtitle">Please make sure to answer the following questions with * mark.</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="section09EmergencyName" class="col-sm-4 col-form-label required-label">40. Emergency Contact Name</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="section09EmergencyName"
+                                                            placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="section09EmergencyRelationship"
+                                                        class="col-sm-4 col-form-label required-label">41. Relationship</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="section09EmergencyRelationship" placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="section09EmergencyContact"
+                                                        class="col-sm-4 col-form-label required-label">42. Contact Number (emergency contact)</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control"
+                                                            id="section09EmergencyContact" placeholder="Enter your answer">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section08']" type="button" class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section10']" type="button" class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

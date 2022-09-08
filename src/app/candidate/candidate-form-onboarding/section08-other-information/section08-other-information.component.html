@@ -1,0 +1,193 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Other Information</h4>
+                                        <span class="subtitle">Please make sure to answer the following questions with * mark.</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <div class="mb-3 row">
+                                                    <label for="section08isConvicted" class="col-sm-6 col-form-label required-label">35. Have you ever been convicted in a court of law in any country?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isConvicted" id="ConvictedYes"
+                                                                (change)="isConvicted=true">
+                                                            <label class="form-check-label"
+                                                                for="ConvictedYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isConvicted" id="ConvictedNo"
+                                                                (change)="isConvicted=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="ConvictedNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isConvicted">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08ConvictedAnswer"
+                                                            class="col-sm-6 col-form-label">35i. If convicted, please provide details</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="section08ConvictedAnswer" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="section08isDismissed" class="col-sm-6 col-form-label required-label">36. Have you ever been dismissed, discharged, <br/> or suspended from employment?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isDismissed" id="DismissedYes"
+                                                                (change)="isDismissed=true">
+                                                            <label class="form-check-label"
+                                                                for="DismissedYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isDismissed" id="DismissedNo"
+                                                                (change)="isDismissed=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="DismissedNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isDismissed">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08DismissedAnswer"
+                                                            class="col-sm-6 col-form-label">36i. If convicted, please provide details</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="section08DismissedAnswer" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label for="section08isSuffering" class="col-sm-6 col-form-label required-label">37. Are you suffering from any handicaps, ailments, disease, <br/> or is under long term medication?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isSuffering" id="SufferingYes"
+                                                                (change)="isSuffering=true">
+                                                            <label class="form-check-label"
+                                                                for="SufferingYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isSuffering" id="SufferingNo"
+                                                                (change)="isSuffering=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="SufferingNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isSuffering">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08SufferingAnswer"
+                                                            class="col-sm-6 col-form-label">37i. If suffering from any handicaps, ailments, disease, or is under long term medication, please provide details</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="section08SufferingAnswer" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3 row">
+                                                    <label for="section08isBankrupt" class="col-sm-6 col-form-label required-label">38. Have you ever been declared bankrupt?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isBankrupt" id="BankruptYes"
+                                                                (change)="isBankrupt=true">
+                                                            <label class="form-check-label"
+                                                                for="BankruptYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isBankrupt" id="BankruptNo"
+                                                                (change)="isBankrupt=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="BankruptNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="isBankrupt">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08BankruptAnswer"
+                                                            class="col-sm-6 col-form-label">38i. If declared bankrupt, please provide details</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="section08BankruptAnswer" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3 row">
+                                                    <label for="section08isRelative" class="col-sm-6 col-form-label required-label">39. Do you have any friends or relatives working in GECO group?</label>
+                                                    <div class="col-sm-6 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isRelative" id="RelativeYes"
+                                                                (change)="hasRelative=true">
+                                                            <label class="form-check-label"
+                                                                for="RelativeYes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section08isRelative" id="RelativeNo"
+                                                                (change)="hasRelative=false" checked="check">
+                                                            <label class="form-check-label"
+                                                                for="RelativeNo">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div *ngIf="hasRelative">
+                                                    <div class="mb-3 row">
+                                                        <label for="section08RelativeAnswer"
+                                                            class="col-sm-6 col-form-label">39i. Please state your friends and relatives working in GECO group</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="section08RelativeAnswer" placeholder="Enter your answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section07']" type="button" class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section09']" type="button" class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

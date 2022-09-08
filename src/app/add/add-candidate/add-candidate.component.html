@@ -1,0 +1,104 @@
+<div class="nav-bar">
+  <app-navbar></app-navbar>
+</div>
+<div class="edit-cohort-hrops">
+  <div class="title-container text-center">Add Candidate</div>
+  <div class="edit-content">
+    <form [formGroup]="addCandidateForm">
+
+      <div class="row mb-3">
+      <small *ngIf="addCandidateForm.controls['email'].value === ''" class="text-danger">{{existCandidateMsg}}</small>
+      </div>
+
+      <!--First Name-->
+      <div class="row mb-3">
+        <label for="firstName" class="col-sm-2 col-form-label">1. First Name</label>
+        <div class="col-sm-10">
+          <input type="text" name="firstName" id="firstName" placeholder="First Name" formControlName="firstName" >
+          <small *ngIf="addCandidateForm.get('firstName')?.invalid && addCandidateForm.get('firstName')?.touched" class="text-danger">**First Name Is Required (minimum length of 10)</small>
+        </div>
+      </div>
+
+      <!--Last Name-->
+      <div class="row mb-3">
+        <label for="lastName" class="col-sm-2 col-form-label">2. Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name" formControlName="lastName" >
+          <small *ngIf="addCandidateForm.get('lastName')?.invalid && addCandidateForm.get('lastName')?.touched" class="text-danger">**Last Name Is Required (minimum length of 10)</small>
+        </div>
+      </div>
+
+      <!--Phone Number-->
+      <div class="row mb-3">
+        <label for="mobileNumber" class="col-sm-2 col-form-label">2. Phone Number</label>
+        <div class="col-sm-10">
+          <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Phone Number" formControlName="mobileNumber" >
+          <small *ngIf="addCandidateForm.get('mobileNumber')?.invalid && addCandidateForm.get('mobileNumber')?.touched" class="text-danger">**Phone Number Is Required (no characters allowed)</small>
+        </div>
+      </div>
+
+      <!--Email-->
+      <div class="row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">3. Email Address</label>
+        <div class="col-sm-10">
+          <input type="email" id="email" placeholder="Candidate Email" name="email" formControlName="email" >
+          <small *ngIf="addCandidateForm.get('email')?.invalid && addCandidateForm.get('email')?.touched" class="text-danger">**Email Is Required</small>
+        </div>
+      </div>
+
+      <!--Status-->
+      <div class="row mb-3">
+        <label for="status" class="col-sm-2 col-form-label">5. Status</label>
+        <div class="col-sm-10">
+          <select name="status" id="status" formControlName="status" >
+            <option value="">--SELECT--</option>
+            <option value="interview">Interview</option>
+            <option value="accepted">Accepted</option>
+            <option value="rejected">Rejected</option>
+            <option value="pending">Pending</option>
+          </select>
+          <small *ngIf="addCandidateForm.get('status')?.invalid && addCandidateForm.get('status')?.touched" class="text-danger">**Status Is Required</small>
+        </div>
+      </div>
+
+      <!--Submit Button-->
+      <!-- Button trigger modal -->
+      <div class="text-center">
+        <button type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addCandidateModal"
+                [disabled]="addCandidateForm.invalid"
+                (click)="handleAddCandidate()"
+        >
+          + Add Candidate
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addCandidateModal" tabindex="-1" aria-labelledby="addCandidateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addCandidateModalLabel">Candidate added successfully</h5>
+<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+      </div>
+      <div class="modal-body">
+        '{{this.addCandidateForm.controls['firstName'].value}}
+        {{this.addCandidateForm.controls['lastName'].value}}'
+        is now in cohort 11
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+                data-bs-dismiss="modal"
+                [routerLink]="['/profile']"
+                routerLinkActive="router-link-active">
+          ok
+        </button>
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>

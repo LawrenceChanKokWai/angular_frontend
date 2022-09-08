@@ -1,0 +1,46 @@
+<!-- <div *ngIf="accountService.currentUser$ | async" class="nav-bar"> -->
+
+<app-navbar></app-navbar>
+
+<div class="content">
+    <!-- <app-home-hrops></app-home-hrops> -->
+    <!-- <router-outlet name="hrops-dashboard"></router-outlet>
+    <router-outlet name="actmgr-dashboard"></router-outlet> -->
+
+<!--  1. Human resources => hr@gmail.com 12345-->
+<!--  2. Account manager => am@gmail.com 12345-->
+<!--  3. Ust manager => ust@gmail.com 12345-->
+<!--  4. finance => fin@gmail.com 12345-->
+<!--  5. candidate => can@gmail.com 12345-->
+<!--  6. candidate onboard => canon@gmail.com 12345-->
+
+  <!--  HR route-->
+  <app-home-hrops *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 1"></app-home-hrops>
+  <!--  Account Manager Route-->
+  <app-home-acctmgr *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 2"></app-home-acctmgr>
+  <!--  UST Route-->
+  <app-home-ust *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 3"></app-home-ust>
+  <!--  Finance Route-->
+  <app-home-finance *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 4"></app-home-finance>
+  <!--  Candidate Route-->
+  <app-candidate *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 5"></app-candidate>
+  <!--  On-boarding Route-->
+  <app-candidate-form-onboarding *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 6"></app-candidate-form-onboarding>
+
+
+<!--    <ul>-->
+<!--      <li *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 1">Human Resource</li>-->
+<!--      <li *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 2">Account Manager</li>-->
+<!--      <li *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 3">UST Manager</li>-->
+<!--      <li *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 4">Finance</li>-->
+<!--      <li *ngIf="accountService.isLoggedIn() && accountService.currentUser.RoleId == 5">Candidates</li>-->
+<!--    </ul>-->
+
+
+<!--    <app-home-hrops *ngIf="role == 'hrops'"></app-home-hrops>-->
+<!--    <app-home-acctmgr *ngIf="role == 'acctmgr'"></app-home-acctmgr>-->
+<!--    <app-home-ust *ngIf="role == 'ustmanager'"></app-home-ust>-->
+<!--    <app-home-finance *ngIf="role == 'finance'"></app-home-finance>-->
+<!--    <app-candidate *ngIf="role == 'candidate'"></app-candidate>-->
+<!--    <app-candidate-form-onboarding *ngIf="role == 'candidate'"></app-candidate-form-onboarding>-->
+</div>

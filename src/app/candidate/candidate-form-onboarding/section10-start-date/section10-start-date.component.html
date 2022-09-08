@@ -1,0 +1,80 @@
+<div class="nav-bar">
+    <app-navbar></app-navbar>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <article style="margin-top: 1em;">
+
+                <div class="widget-body">
+                    <div class="row g-0">
+                        <app-onboarding-header></app-onboarding-header>
+
+                        <div class="col-sm-12 col-md-3">
+                            <app-side-nav></app-side-nav>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="rightab">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active include" id="tab3">
+                                        <br>
+                                        <h4 class="title">Start Date</h4>
+                                        <span class="subtitle">Please make sure to answer the following questions with * mark.</span>
+                                        <form class="mt-3">
+                                            <div class="input-wrapper">
+
+                                                <!-- <br /> -->
+                                                <div class="mb-3 row">
+                                                    <label for="section10NoticePeriod" class="col-sm-4 col-form-label required-label">43. Notice Period</label>
+                                                    <div class="col-sm-8 align-self-center">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section10NoticePeriod" id="section10NoticeImmediate"
+                                                                checked="check">
+                                                            <label class="form-check-label"
+                                                                for="section10NoticeImmediate">Immediate</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section10NoticePeriod" id="section10NoticeOne"
+                                                                >
+                                                            <label class="form-check-label"
+                                                                for="section10NoticeOne">One Month</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="section10NoticePeriod" id="section10NoticeTwo"
+                                                                >
+                                                            <label class="form-check-label"
+                                                                for="section10NoticeTwo">Two Months</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="mb-3 row">
+                                                    <label for="section10StartDate" class="col-sm-4 col-form-label align-self-center">44. Earliest Start Date</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control mt-2" bsDatepicker
+                                                            [bsConfig]="bsConfig" placement="top"
+                                                            placeholder="Enter date" id="section10StartDate">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 text-end mt-3 mb-3">
+                                                <button [routerLink]="['/section09']" type="button" class="btn btn-primary px-5 me-2">Back</button>
+                                                <button [routerLink]="['/section11']" type="button" class="btn btn-primary px-5">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
